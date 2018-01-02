@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="webpageCSS.css">
+    <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arapey' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidenav">
+            <img src="glasses-789836_960_720.jpg" alt="Miss Math Arthur" width="120" height="110">
+        <a href="MissMathArthur.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="review.html">Client reviews</a>
+        <a href ="#"> Job vacancies</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+<div class="main">
+        <h2>Services</h2>
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+            <img src="primarymathematics.jpg" alt="Primary Mathematics" style="width:100%">
+            <div class="content">
+            <h1>Primary Mathematics - Year 1 - Year 6 </h1>
+            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu 
+                recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+          </div></div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+            <img src="gcsemaths.jpg" style="width:100%">
+            <div class="content">
+            <h1>GCSE Mathematics - Year 7 - Year 9 Foundation or Higher </h1>
+            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu 
+                recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+          </div>
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+            <img src="GCSEexamprep.jpg" style="width:100%">
+            <div class="content">
+            <h1>GCSE Mathematics - Year 10-11 Foundation or Higher Exam preparation </h1>
+            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu 
+                recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+          </div>
+
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+            <img src="alevelmathematics.jpg" style="width:100%">
+            <div class="content">
+            <h1>Alevel Mathematics</h1>
+            <p> We offer support in Core 1, Core 2, Core 3, Core 4, Statistics 1, Statistics 2, Mechanics 1 and Mechanics 2.  </p>
+          </div>
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+            <img src="primaryenglish.jpg" style="width:100%">
+            <div class="content">
+        <h1>Primary English</h1>
+         <p> We also work on handwriting skills in these sessions.   </p>
+            </div>
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+            <img src="GCSEenglish.jpg" style="width:100%">
+            <div class="content">
+                    <h1>GCSE English</h1>
+                     <p>  </p>
+            </div>
+          </div>
+
+        <div class="mySlides">
+        <div class="numbertext">7 / 7</div>
+        <img src="Science.jpg" style="width:100%">
+        <div class="content">
+        <h1>GCSE Science</h1>
+        <p>  </p>
+        </div>                        
+          </div>
+          
+            
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="primarymathematics.jpg" style="width:100%" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="gcsemaths.jpg" style="width:100%" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="GCSEexamprep.jpg" style="width:100%" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="alevelmathematics.jpg" style="width:100%" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="primaryenglish.jpg" style="width:100%" onclick="currentSlide(5)">
+            </div>    
+            <div class="column">
+              <img class="demo cursor" src="GCSEenglish.jpg" style="width:100%" onclick="currentSlide(6)">
+            </div>
+            <div class="column">
+                    <img class="demo cursor" src="science.jpg" style="width:100%" onclick="currentSlide(5)">
+                  </div>
+        </div>
+        </div>
+
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+            
+        
+
+      </div>
+           
+           
+</body>
+</html> 
